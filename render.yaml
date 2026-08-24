@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: auth-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: CORS_ORIGIN
+        value: https://qsv6747.github.io
+      - key: PORT
+        value: 4000
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: NOTIFY_EMAIL
+        sync: false
