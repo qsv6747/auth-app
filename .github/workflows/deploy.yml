@@ -41,6 +41,8 @@ jobs:
         run: |
           echo "BASE_PATH is: [$BASE_PATH]"
           npm run build
+          echo "----- dist/index.html contents -----"
+          cat dist/index.html
 
       - uses: actions/configure-pages@v5
 
