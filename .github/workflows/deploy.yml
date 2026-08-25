@@ -38,7 +38,9 @@ jobs:
         env:
           VITE_API_BASE: ${{ secrets.VITE_API_BASE }}
           BASE_PATH: ${{ vars.BASE_PATH }}
-        run: npm run build
+        run: |
+          echo "BASE_PATH is: [$BASE_PATH]"
+          npm run build
 
       - uses: actions/configure-pages@v5
 
